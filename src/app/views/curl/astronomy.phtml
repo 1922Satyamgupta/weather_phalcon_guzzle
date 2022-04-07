@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="margin-left:30%; background-color:lightgray;">
-<h3>Astronomy</h3>
-<?php 
-foreach($astronomy as $k => $v)
-{
-    
-    if(isset($k))
-    {
-        if($k == 'astronomy')
-        {
-            foreach($v as $k1 => $v1)
-            { ?>                  
-                    <p>sunrise : <?php print_r($v1['sunrise']);?></p>
-                    <p>sunset : <?php print_r($v1['sunset']);?></p>
-                    <p>moonrise : <?php print_r($v1['moonrise']);?></p>
-                    <p>moonset : <?php print_r($v1['moonset']);?></p>
-                    <p>moon_phase : <?php print_r($v1['moon_phase']);?></p>
-                    <p>moon_illumination : <?php print_r($v1['moon_illumination']);?></p>
-                   
-<?php  }}}} ?>
+    <h3>Astronomy</h3>
+    <?php
+    foreach ($astronomy as $k => $v) {
+
+        if (isset($k)) {
+            if ($k == 'astronomy') {
+                foreach ($v as $k1 => $v1) { ?>
+                    <p>sunrise : <?php print_r($v1['sunrise']); ?></p>
+                    <p>sunset : <?php print_r($v1['sunset']); ?></p>
+                    <p>moonrise : <?php print_r($v1['moonrise']); ?></p>
+                    <p>moonset : <?php print_r($v1['moonset']); ?></p>
+                    <p>moon_phase : <?php print_r($v1['moon_phase']); ?></p>
+                    <p>moon_illumination : <?php print_r($v1['moon_illumination']); ?></p>
+
+    <?php  }
+            }
+        }
+    } ?>
 </body>
+
 </html>

@@ -4,78 +4,95 @@ $id = $this->request->getPost('id');
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
 
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
+    td,
+    th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
 
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-</style>
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+  </style>
 </head>
+
 <body>
 
-<h2>HTML Table</h2>
-<table>
+  <h2>Check Weather Details:</h2>
+  <table>
     <tr>
-        <th>Location Details</th>
-        <th>Action</th>
-        
+      <th>Location Details</th>
+      <th>Action</th>
+
     </tr>
     <tr>
-        <form action="/curl/dest" method="post">
-            <td>Current weather</td>
-            <td>  <input type="hidden" name="c_name" value="<?php if(isset($c_name)){ print_r($c_name);} ?>"><input type="submit" value="search"></td>
-        </form>
+      <form action="/curl/dest" method="post">
+        <td>Current weather</td>
+        <td> <input type="hidden" name="c_name" value="<?php if (isset($c_name)) {
+                                                          print_r($c_name);
+                                                        } ?>"><input type="submit" value="search"></td>
+      </form>
 
-  </tr>
-  <tr>
-  <form action="/curl/forecast" method="post">
-    <td>Forecast</td>
-    <td> <input type="hidden" name="c_name" value="<?php if(isset($c_name)){ print_r($c_name);} ?>"><input type="submit" value="search"></td>
-  </form>
-  </tr>
-  <tr>
-  <form action="/curl/timeZone" method="post">
-    <td>Time Zone</td>
-    <td> <input type="hidden" name="c_name" value="<?php if(isset($c_name)){ print_r($c_name);} ?>"><input type="submit" value="search"></td>
-  </form>
-  </tr>
-  <tr>
-  <form action="/curl/sports" method="post">
-    <td>Sports</td>
-    <td> <input type="hidden" name="c_name" value="<?php if(isset($c_name)){ print_r($c_name);} ?>"><input type="submit" value="search"></td>
-  </form>
-  </tr>
-  <tr>
-  <form action="/curl/astronomy" method="post">
-    <td>Astronomy</td>
-    <td> <input type="hidden" name="c_name" value="<?php if(isset($c_name)){ print_r($c_name);} ?>"><input type="submit" value="search"></td>
-  </form>
-  </tr>
-  <tr>
-  <form action="/curl/weatheralerts" method="post">
-    <td>Weather Alerts</td>
-    <td> <input type="hidden" name="c_name" value="<?php if(isset($c_name)){ print_r($c_name);} ?>"><input type="submit" value="search"></td>
-  </form>
-  </tr>
-  <tr>
-  <form action="/curl/airquality" method="post">
-    <td>Air Quality</td>
-    <td> <input type="hidden" name="c_name" value="<?php if(isset($c_name)){ print_r($c_name);} ?>"><input type="submit" value="search"></td>
-  </form>
-  </tr>
-</table>
+    </tr>
+    <tr>
+      <form action="/curl/forecast" method="post">
+        <td>Forecast</td>
+        <td> <input type="hidden" name="c_name" value="<?php if (isset($c_name)) {
+                                                          print_r($c_name);
+                                                        } ?>"><input type="submit" value="search"></td>
+      </form>
+    </tr>
+    <tr>
+      <form action="/curl/timeZone" method="post">
+        <td>Time Zone</td>
+        <td> <input type="hidden" name="c_name" value="<?php if (isset($c_name)) {
+                                                          print_r($c_name);
+                                                        } ?>"><input type="submit" value="search"></td>
+      </form>
+    </tr>
+    <tr>
+      <form action="/curl/sports" method="post">
+        <td>Sports</td>
+        <td> <input type="hidden" name="c_name" value="<?php if (isset($c_name)) {
+                                                          print_r($c_name);
+                                                        } ?>"><input type="submit" value="search"></td>
+      </form>
+    </tr>
+    <tr>
+      <form action="/curl/astronomy" method="post">
+        <td>Astronomy</td>
+        <td> <input type="hidden" name="c_name" value="<?php if (isset($c_name)) {
+                                                          print_r($c_name);
+                                                        } ?>"><input type="submit" value="search"></td>
+      </form>
+    </tr>
+    <tr>
+      <form action="/curl/weatheralerts" method="post">
+        <td>Weather Alerts</td>
+        <td> <input type="hidden" name="c_name" value="<?php if (isset($c_name)) {
+                                                          print_r($c_name);
+                                                        } ?>"><input type="submit" value="search"></td>
+      </form>
+    </tr>
+    <tr>
+      <form action="/curl/airquality" method="post">
+        <td>Air Quality</td>
+        <td> <input type="hidden" name="c_name" value="<?php if (isset($c_name)) {
+                                                          print_r($c_name);
+                                                        } ?>"><input type="submit" value="search"></td>
+      </form>
+    </tr>
+  </table>
 </body>
-</html>
 
+</html>

@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body style = "margin-left:40%; ">
+
+<body style="margin-left:40%; ">
     <h2>Current_Weather</h2>
-<?php
-foreach ($current_weather as $k => $v) {
-    echo "<pre>";
+    <?php
+    foreach ($current_weather as $k => $v) {
+        echo "<pre>";
 
-    if ($k == 'current') {
-        //  print_r($v);
-       
-        echo "<label>Tempearture:<h3>".$v['temp_c']."</h3></label>";
-        echo "<br>";
-        echo "<label>Wind Speed:<h3>".$v['wind_kph']."</h3></label>";
-        // print_r($v['wind_kph']);
-        echo "<br>";
-        foreach($v as $k2 => $v2)
-        {
-           if($k2 == 'condition')
-           {  
-            echo "<label>Weather Condition:<h3>".$v2['text']."</h3></label>";
-            echo "<br>";
-            //    print_r($v2['text']);
-            echo "<img src=http:".$v2['icon'].">";
-            echo "<br>";
-            //    print_r($v2['icon']);
-               
-           }
+        if ($k == 'current') {
+            //  print_r($v);
 
-           if($k2 == 'air_quality')
-           {   
-            echo "<label>Air Quality(on PM 2_5):<h3>".$v2['pm2_5']."</h3></label>";
-            //    print_r($v2['pm2_5']);
+            echo "<label>Tempearture:<h3>" . $v['temp_c'] . "</h3></label>";
             echo "<br>";
-            echo "<label>Air Quality(on PM 10):<h3>".$v2['pm10']."</h3></label>";
-            //    print_r($v2['pm10']);
-               
-           }
+            echo "<label>Wind Speed:<h3>" . $v['wind_kph'] . "</h3></label>";
+            // print_r($v['wind_kph']);
+            echo "<br>";
+            foreach ($v as $k2 => $v2) {
+                if ($k2 == 'condition') {
+                    echo "<label>Weather Condition:<h3>" . $v2['text'] . "</h3></label>";
+                    echo "<br>";
+                    //    print_r($v2['text']);
+                    echo "<img src=http:" . $v2['icon'] . ">";
+                    echo "<br>";
+                    //    print_r($v2['icon']);
+
+                }
+
+                if ($k2 == 'air_quality') {
+                    echo "<label>Air Quality(on PM 2_5):<h3>" . $v2['pm2_5'] . "</h3></label>";
+                    //    print_r($v2['pm2_5']);
+                    echo "<br>";
+                    echo "<label>Air Quality(on PM 10):<h3>" . $v2['pm10'] . "</h3></label>";
+                    //    print_r($v2['pm10']);
+
+                }
+            }
         }
+        echo "</pre>";
     }
-    echo "</pre>";
-}
-?>
-    
-</body>
-</html>
+    ?>
 
+</body>
+
+</html>

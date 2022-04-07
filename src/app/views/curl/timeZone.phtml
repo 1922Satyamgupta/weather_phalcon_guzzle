@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="margin-left:30%; background-color:beige;">
-<h3>Time Zone</h3>
-<?php 
-foreach($timeZone as $k => $v)
-{
-?>
+    <h3>Time Zone</h3>
+    <?php
+    foreach ($timeZone as $k => $v) {
+    ?>
 
 
-                    <p><b>Name : </b><?php print_r($v['name']);?></p>
-                    <p><b>Region :</b> <?php print_r($v['region']);?></p>
-                    <p><b>Country :</b><?php print_r($v['country']);?></p>
-                    <p><b>Latitude :</b><?php print_r($v['lat']);?></p>
-                    <p><b>Longitude :</b><?php print_r($v['lon']);?></p>
-                    <p><b>Time Zone :</b><?php print_r($v['tz_id']);?></p>
-                    <p><b>Localtime epoch :</b><?php print_r($v['localtime_epoch']);?></p>
-                    <p><b>Localtime :</b><?php print_r($v['localtime']);?></p>
-                   
+        <p><b>Name : </b><?php print_r($v['name']); ?></p>
+        <p><b>Region :</b> <?php print_r($v['region']); ?></p>
+        <p><b>Country :</b><?php print_r($v['country']); ?></p>
+        <p><b>Latitude :</b><?php print_r($v['lat']); ?></p>
+        <p><b>Longitude :</b><?php print_r($v['lon']); ?></p>
+        <p><b>Time Zone :</b><?php print_r($v['tz_id']); ?></p>
+        <p><b>Localtime epoch :</b><?php print_r($v['localtime_epoch']); ?></p>
+        <p><b>Localtime :</b><?php print_r($v['localtime']); ?></p>
 
-                    
-               
 
-<?php  } ?>
 
-    
+
+
+    <?php  } ?>
+
+
 </body>
+
 </html>

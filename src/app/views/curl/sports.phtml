@@ -1,32 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body style="margin-left: 30%; background-color:cornsilk;">
-<?php 
+    <?php
 
-foreach($sports as $k => $v)
-{
-    foreach($v as $k1 => $v1)
-    {
-?>
+    foreach ($sports as $k => $v) {
+        foreach ($v as $k1 => $v1) {
+    ?>
 
 
-                    <h4><b>Sport Name: </b><?php if(isset($k)){print_r($k);} ?></h4>
-                 
-                        <p>Stadium : <?php if(isset($v1['stadium'])){print_r($v1['stadium']);} ?></p>
-                        <p>Country : <?php if(isset($v1['country'])){print_r($v1['country']);} ?></p>
-                        <p>Tournament : <?php if(isset($v1['tournament'])){print_r($v1['tournament']);} ?></p>
-                        <p>Start : <?php if(isset($v1['start'])){print_r($v1['start']);} ?></p>
-                        <p>Match : <?php if(isset($v1['match'])){print_r($v1['match']);} ?></p>
-                
-                        <br><br>
-<?php  } }  ?>
+            <h4><b>Sport Name: </b><?php if (isset($k)) {
+                                        print_r($k);
+                                    } ?></h4>
 
-    
+            <p>Stadium : <?php if (isset($v1['stadium'])) {
+                                print_r($v1['stadium']);
+                            } ?></p>
+            <p>Country : <?php if (isset($v1['country'])) {
+                                print_r($v1['country']);
+                            } ?></p>
+            <p>Tournament : <?php if (isset($v1['tournament'])) {
+                                print_r($v1['tournament']);
+                            } ?></p>
+            <p>Start : <?php if (isset($v1['start'])) {
+                            print_r($v1['start']);
+                        } ?></p>
+            <p>Match : <?php if (isset($v1['match'])) {
+                            print_r($v1['match']);
+                        } ?></p>
+
+            <br><br>
+    <?php  }
+    }  ?>
+
+
 </body>
+
 </html>
