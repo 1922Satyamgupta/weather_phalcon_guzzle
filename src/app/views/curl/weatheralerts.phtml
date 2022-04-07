@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin-left: 30%; background-color:ghostwhite;">
+
+<?php
+
+foreach($weatherAlerts as $k => $v)
+{
+    if($k == 'location'){
+        $place = $v['name'];
+    
+    }
+    if($k == 'forecast')
+    {
+        foreach($v as $k1 => $v1)
+        {             
+                foreach($v1[0] as $k2 => $v2)
+                {
+                   
+                    if($k2 == 'hour')
+                    {   
+                        foreach($v2 as $k3 => $v3)
+                        {
+                            ?>
+
+
+                    <h4><b>Place Name: </b><?php print_r($place); ?></h4>
+                    <p></p>
+                    <p>Date and time : <?php print_r($v3['time']);?><p>
+                    <p>Chance of Rain : <?php if($v3['chance_of_rain'] == 0){ print_r("No");}else{print_r("Yes");}?><p>
+                    <p>Chance of Rain : <?php if($v3['chance_of_snow'] == 0){ print_r("No");}else{print_r("Yes");}?><p>
+                    <p>cloud : <?php if($v3['cloud'] == 0){ print_r("No");}else{print_r("Yes");}?><p>
+         <?php } ?>
+    <?php } } }}}?>
+
+</body>
+</html>
+    
+
+
+
+

@@ -1,0 +1,17 @@
+<body style="background-color:rgb(207, 159, 255);">
+    <h2 style="margin-left:35%;">Choose Role:</h2>
+
+    <?php echo $this->tag->form("acl/buildacl"); ?>
+    <p>
+        <label for="name">Role:</label>
+        <?php echo $this->tag->select(['role', Roles::find(), 'using' => ['role', 'role']]); ?>
+    </p>
+    <?php if ($orders->count() > 0) { ?>
+        <?php foreach ($orders as $order) { ?>
+            <label for=""><?php echo $order->controller ?></label>
+            <input type="checkbox" name="controller[]" value="<?php echo $order->controller ?>">
+            <br>
+            <label for="" style="margin-left:4%;"><?php echo $order->action ?></label>
+            <input type="checkbox" name="action[]" value= "<?php echo $order->action ?>"><br><br>
+       <?php }?>
+       <?php }?>

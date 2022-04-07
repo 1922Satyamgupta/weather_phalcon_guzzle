@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin-left: 30%; background-color:mistyrose;">
+<h3><b>Air Quality</b></h3>
+
+          <?php
+          foreach ($airQuality as $k => $v) {
+            if ($k == 'location') {                         
+            ?>        
+            <?php if(isset(($v['name']))){ print_r($v['name']);} }?>
+
+
+            <?php  if ($k == 'current') {   ?>
+           
+           <?php 
+         }?>
+
+
+            <?php
+            foreach($v as $k2 => $v2)
+            {
+           if($k2 == 'condition')
+           {
+               ?>
+            
+              <?php 
+               
+           }
+
+           if($k2 == 'air_quality')
+           {
+               ?>
+                <h5>PPM2_5:<?php  print_r($v2['pm2_5']);?> </h5>
+                <h5>PPM10: <?php  print_r($v2['pm10']);?> </h5>
+               <?php
+               
+           }
+        }
+        ?>
+           
+            <?php } ?>
+</body>
+</html>            
+         
